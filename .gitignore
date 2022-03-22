@@ -1,3 +1,4 @@
 ll_env/ 
 __pycache__/
+old_files/
 *.sqlite3

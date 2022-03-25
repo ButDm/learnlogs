@@ -1,0 +1,23 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+  <h1>Topics:</h1>
+{% endblock page_header %}
+
+{% block content %}
+  <h3>Public topics:</h3>
+  <ul>
+    {% for topic in public_topics %}
+      {% if topic.public == True %}
+        <li><h3>
+          <a href="{% url 'learning_logs:public_topic' topic.id %}">{{ topic }}</a>
+          </h3>
+            <a>(public topic was created by user: {{ topic.owner }}.)</a>
+        </li>
+      {% endif %}
+    {% empty %}
+      <li><h3>No public topics have been added yet.</h3></li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}

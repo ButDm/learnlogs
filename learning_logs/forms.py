@@ -11,6 +11,7 @@ class TopicForm(forms.ModelForm):
         model = Topic
         fields = ['text']
         labels = {'text': 'Topic'}
+        public = forms.BooleanField(required=False)
 
 
 class EntryForm(forms.ModelForm):

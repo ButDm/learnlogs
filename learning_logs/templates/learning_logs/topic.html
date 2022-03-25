@@ -18,7 +18,7 @@
       <h5 class="card-header">
         {{ entry.date_added|date:'M d, Y H:i' }}
         <small><a href="{% url 'learning_logs:edit_entry' entry.id %}">
-            edit entry</a></small>
+          edit entry</a></small>
       </h5>
       <div class="card-body">
         {{ entry.text|linebreaks }}

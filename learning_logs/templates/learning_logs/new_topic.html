@@ -11,6 +11,15 @@
   <form action="{% url 'learning_logs:new_topic' %}" method='post'>
     {% csrf_token %}
     {% bootstrap_form form %}
+
+    <div>
+        
+      <label class="checkbox" for="public">
+        <input type="checkbox" name="topic" value="True" 
+          {% if topic.public %}checked{% endif %}>Check for create public topic.
+      </label>
+    </div>
+
     {% buttons %}    
       <button name="submit">Add topic</button>
     {% endbuttons %}
